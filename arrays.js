@@ -95,6 +95,37 @@ console.log('fruitsArr', fruitsArr);
 const deletedFruits = fruitsArr.splice(1, 2, 'Pineapple', 'Orange');
 console.log('deletedFruits', deletedFruits);
 console.log('fruitsArr', fruitsArr);
+
+const arrNum2 = [22, 1, 3, 18, 9, 2, 44, 98, 45];
 // Map
+// arr.map() -- does not mutate the data // SAFE - React
+const doubledArrNum2 = arrNum2.map(function (item) {
+  return item * 2;
+});
+console.log('doubledArrNum2', doubledArrNum2);
+
+const oddEvenArrNum2 = arrNum2.map(function (item) {
+  if (item % 2 === 0) {
+    return 'Even';
+  } else {
+    return 'Odd';
+  }
+});
+console.log('oddEvenArrNum2', oddEvenArrNum2);
+
+const oddEvenObjArrNum2 = arrNum2.map(function (item) {
+  if (item % 2 === 0) {
+    return {
+      val: item,
+      type: 'Even',
+    };
+  } else {
+    return {
+      val: item,
+      type: 'Odd',
+    };
+  }
+});
+console.log('oddEvenObjArrNum2', oddEvenObjArrNum2);
 
 // Reduce
