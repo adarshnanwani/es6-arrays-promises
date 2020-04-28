@@ -126,6 +126,44 @@ const oddEvenObjArrNum2 = arrNum2.map(function (item) {
     };
   }
 });
-console.log('oddEvenObjArrNum2', oddEvenObjArrNum2);
+console.log('(oddEvenObjArrNum2', oddEvenObjArrNum2);
 
 // Reduce
+// arr.reduce() -- does not mutate the data // SAFE - React
+// const arrNum2 = [22, 1, 3, 18, 9, 2, 44, 98, 45];
+const arrNum2Sum = arrNum2.reduce(function (sum, item) {
+  return item + sum;
+}, 0);
+console.log('arrNum2Sum', arrNum2Sum);
+
+//  i  sum   item  return
+//  0  0      22   22
+//  1  22     1    23
+//  2  23     3    26
+//  3  26     18   44
+//  ..  ..    ..   ..
+//  8  197     45   242
+
+const nameArrConcat = nameArr.reduce(function (str, item) {
+  return (str || '') + item;
+});
+console.log('nameArrConcat', nameArrConcat);
+
+// Array method chaining example
+const sumOfTripledOdd = arrNum2
+  .map(function (num) {
+    // triple by 3 and return a new array
+    return num * 3;
+  })
+  .filter(function (num) {
+    // filter the odd numbers and return a new array
+    if (num % 2 !== 0) {
+      return true;
+    }
+  })
+  .reduce(function (sum, num) {
+    // return the sum
+    return (sum || 0) + num;
+  });
+
+console.log('sumOfTripledOdd', sumOfTripledOdd);
