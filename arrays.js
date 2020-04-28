@@ -79,7 +79,7 @@ const name = nameArr.join('');
 console.log('name', name);
 
 // Slice
-
+// arr.slice() -- does not mutate the array --- SAFE - React
 const nameSection = nameArr.slice(2);
 const negativeNameSection = nameArr.slice(-4);
 const nameSection2 = nameArr.slice(2, 5);
@@ -90,7 +90,11 @@ console.log('nameSection2', nameSection2);
 console.log('copyNameArr', copyNameArr);
 
 // Splice
-
+const fruitsArr = ['Mango', 'Apple', 'Banana', 'Avocado'];
+console.log('fruitsArr', fruitsArr);
+const deletedFruits = fruitsArr.splice(1, 2, 'Pineapple', 'Orange');
+console.log('deletedFruits', deletedFruits);
+console.log('fruitsArr', fruitsArr);
 // Map
 
 // Reduce
