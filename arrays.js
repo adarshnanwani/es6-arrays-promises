@@ -74,8 +74,20 @@ arrPersons.forEach(function (ob) {
 console.log(arrPersons);
 
 // Join
+const nameArr = ['a', 'd', 'a', 'r', 's', 'h'];
+const name = nameArr.join('');
+console.log('name', name);
 
 // Slice
+
+const nameSection = nameArr.slice(2);
+const negativeNameSection = nameArr.slice(-4);
+const nameSection2 = nameArr.slice(2, 5);
+const copyNameArr = nameArr.slice();
+console.log('nameSection', nameSection);
+console.log('negativeNameSection', negativeNameSection);
+console.log('nameSection2', nameSection2);
+console.log('copyNameArr', copyNameArr);
 
 // Splice
 
